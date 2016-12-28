@@ -1,12 +1,15 @@
 package com.theironyard;
 
 import com.github.javaparser.ParseException;
+import net.doughughes.testifier.exception.CannotFindMethodException;
 import net.doughughes.testifier.matcher.RegexMatcher;
 import net.doughughes.testifier.test.TestifierTest;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
+
+import static org.junit.Assert.fail;
 
 public class ArithmeticOperatorsTest extends TestifierTest {
 
@@ -18,7 +21,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.addTwoIntegers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addTwoIntegers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addTwoIntegers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add two integers together",
@@ -33,7 +41,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.addThreeIntegers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addThreeIntegers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addThreeIntegers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add three integers together",
@@ -48,7 +61,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.addTwoDoubles();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addTwoDoubles");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addTwoDoubles");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add two doubles",
@@ -64,7 +82,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.addThreeDoubles();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addThreeDoubles");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addThreeDoubles");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add three doubles",
@@ -79,7 +102,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.addANegativeAndPositiveNumber();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addANegativeAndPositiveNumber");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addANegativeAndPositiveNumber");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add a negative number and a positive number",
@@ -94,7 +122,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.addIntegerAndDouble();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addIntegerAndDouble");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("addIntegerAndDouble");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add an integer and a double together",
@@ -109,7 +142,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.subtractTwoNumbers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("subtractTwoNumbers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("subtractTwoNumbers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should subtract two numbers",
@@ -124,7 +162,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.subtractThreeNumbers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("subtractThreeNumbers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("subtractThreeNumbers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should subtract three numbers",
@@ -139,7 +182,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.subtractANegativeAndPositiveNumber();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("subtractANegativeAndPositiveNumber");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("subtractANegativeAndPositiveNumber");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should subtract a negative number and a positive number",
@@ -154,7 +202,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.combineAdditionAndSubtractionWithThreeNumbers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("combineAdditionAndSubtractionWithThreeNumbers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("combineAdditionAndSubtractionWithThreeNumbers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should add and subtract three numbers",
@@ -169,7 +222,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.multiplyTwoNumbers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("multiplyTwoNumbers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("multiplyTwoNumbers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should multiply two numbers",
@@ -184,7 +242,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.multiplyThreeNumbers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("multiplyThreeNumbers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("multiplyThreeNumbers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should multiply three numbers",
@@ -199,7 +262,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.divideTwoIntegers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideTwoIntegers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideTwoIntegers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should divide two integers",
@@ -214,7 +282,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.divideThreeIntegers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideThreeIntegers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideThreeIntegers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should divide three integers",
@@ -229,7 +302,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.divideTwoDoubles();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideTwoDoubles");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideTwoDoubles");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should divide two doubles",
@@ -244,7 +322,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.divideThreeDoubles();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideThreeDoubles");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideThreeDoubles");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should divide three doubles",
@@ -259,7 +342,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.divideIntegerByDouble();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideIntegerByDouble");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideIntegerByDouble");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should divide an integer by a double",
@@ -274,7 +362,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.divideDoubleByInteger();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideDoubleByInteger");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("divideDoubleByInteger");
+        } catch (CannotFindMethodException e) {
+            e.printStackTrace();
+        }
 
 
         // check the structure of the code
@@ -290,7 +383,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.remainderOfDividingTwoIntegers();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("remainderOfDividingTwoIntegers");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("remainderOfDividingTwoIntegers");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         Assert.assertThat("The method should get the remainder left over when dividing two integers",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] remainder (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
@@ -304,7 +402,12 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         ArithmeticOperators.combineAllFiveOperatorsWithParenthesisAndNegativeAndPositiveIntegersAndDoubles();
 
         /* assert */
-        String source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("combineAllFiveOperatorsWithParenthesisAndNegativeAndPositiveIntegersAndDoubles");
+        String source = null;
+        try {
+            source = codeWatcher.getMainSourceCodeService().getDescriptionOfMethod("combineAllFiveOperatorsWithParenthesisAndNegativeAndPositiveIntegersAndDoubles");
+        } catch (CannotFindMethodException e) {
+            fail(e.getMessage());
+        }
 
         // check the structure of the code
         Assert.assertThat("The method should use an expression that combines addition, subtraction, multiplication, division, and remainder operators. It must also use both positive and negative integers and doubles, as well as parenthesis.",
