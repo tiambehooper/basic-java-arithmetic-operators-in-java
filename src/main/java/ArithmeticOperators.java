@@ -1,5 +1,3 @@
-package com.theironyard;
-
 /**
  * Follow the instructions in the javadoc comments below to complete the to-do
  * tasks listed below. You can run all tests by selecting and executing the
