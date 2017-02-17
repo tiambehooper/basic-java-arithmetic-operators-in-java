@@ -27,7 +27,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add two integers together",
+        Assert.assertThat("The addTwoIntegers() method should add two integers together",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] plus (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
     }
 
@@ -47,7 +47,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add three integers together",
+        Assert.assertThat("The addThreeIntegers() method should add three integers together",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] plus (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] plus (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
     }
 
@@ -67,7 +67,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add two doubles",
+        Assert.assertThat("The addTwoDoubles() method should add two doubles",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -88,7 +88,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add three doubles",
+        Assert.assertThat("The addThreeDoubles() method should add three doubles",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -108,7 +108,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add a negative number and a positive number",
+        Assert.assertThat("The addANegativeAndPositiveNumber() method should add a negative number and a positive number",
                 source, RegexMatcher.matches("^.*?(((UnaryExpr\\[negative\\] )(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] plus (UnaryExpr\\[positive\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\])|((UnaryExpr\\[positive\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] plus (UnaryExpr\\[negative\\] )(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\])).*?$"));
     }
 
@@ -128,7 +128,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add an integer and a double together",
+        Assert.assertThat("The addIntegerAndDouble() method should add an integer and a double together",
                 source, RegexMatcher.matches("^.*?(((UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr)\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?(DoubleLiteralExpr)\\[[0-9.d]+?\\])|((UnaryExpr\\[.*?\\] )?(DoubleLiteralExpr)\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr)\\[[0-9.d]+?\\])).*?$"));
     }
 
@@ -148,7 +148,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should subtract two numbers",
+        Assert.assertThat("The subtractTwoNumbers() method should subtract two numbers",
                 source, RegexMatcher.matches("^.*?((UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\]).*?$"));
     }
 
@@ -168,7 +168,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should subtract three numbers",
+        Assert.assertThat("The subtractThreeNumbers() method should subtract three numbers",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -188,7 +188,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should subtract a negative number and a positive number",
+        Assert.assertThat("The subtractANegativeAndPositiveNumber() method should subtract a negative number and a positive number",
                 source, RegexMatcher.matches("^.*?(((UnaryExpr\\[negative\\] )(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[positive\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\])|((UnaryExpr\\[positive\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[negative\\] )(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\])).*?$"));
     }
 
@@ -208,7 +208,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should add and subtract three numbers",
+        Assert.assertThat("The combineAdditionAndSubtractionWithThreeNumbers() method should add and subtract three numbers",
                 source, RegexMatcher.matches("^.*?(((UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\])|((UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] plus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] minus (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\])).*?$"));
     }
 
@@ -228,7 +228,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should multiply two numbers",
+        Assert.assertThat("The multiplyTwoNumbers() method should multiply two numbers",
                 source, RegexMatcher.matches("^.*?((UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] times (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\]).*?$"));
     }
 
@@ -248,7 +248,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should multiply three numbers",
+        Assert.assertThat("The multiplyThreeNumbers() method should multiply three numbers",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] times (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\] times (UnaryExpr\\[.*?\\] )?(IntegerLiteralExpr|DoubleLiteralExpr)\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -268,7 +268,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should divide two integers",
+        Assert.assertThat("The divideTwoIntegers() method should divide two integers",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] divide (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
     }
 
@@ -288,7 +288,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should divide three integers",
+        Assert.assertThat("The divideThreeIntegers() method should divide three integers",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] divide (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] divide (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
     }
 
@@ -308,7 +308,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should divide two doubles",
+        Assert.assertThat("The divideTwoDoubles() method should divide two doubles",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] divide (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -328,7 +328,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should divide three doubles",
+        Assert.assertThat("The divideThreeDoubles() method should divide three doubles",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] divide (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] divide (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -348,7 +348,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should divide an integer by a double",
+        Assert.assertThat("The divideIntegerByDouble() method should divide an integer by a double",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] divide (UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\].*?$"));
     }
 
@@ -369,7 +369,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
 
 
         // check the structure of the code
-        Assert.assertThat("The method should divide a double by an integer",
+        Assert.assertThat("The divideDoubleByInteger() method should divide a double by an integer",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?DoubleLiteralExpr\\[[0-9.d]+?\\] divide (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
     }
 
@@ -388,7 +388,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
             fail(e.getMessage());
         }
 
-        Assert.assertThat("The method should get the remainder left over when dividing two integers",
+        Assert.assertThat("The remainderOfDividingTwoIntegers() method should get the remainder left over when dividing two integers",
                 source, RegexMatcher.matches("^.*?(UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\] remainder (UnaryExpr\\[.*?\\] )?IntegerLiteralExpr\\[[0-9]+?\\].*?$"));
     }
 
@@ -408,7 +408,7 @@ public class ArithmeticOperatorsTest extends TestifierTest {
         }
 
         // check the structure of the code
-        Assert.assertThat("The method should use an expression that combines addition, subtraction, multiplication, division, and remainder operators. It must also use both positive and negative integers and doubles, as well as parenthesis.",
+        Assert.assertThat("The combineAllFiveOperatorsWithParenthesisAndNegativeAndPositiveIntegersAndDoubles() method should use an expression that combines addition, subtraction, multiplication, division, and remainder operators. It must also use both positive and negative integers and doubles, as well as parenthesis.",
                 source, RegexMatcher.matches("^(?=.*?UnaryExpr\\[negative\\].*?)(?=.*?UnaryExpr\\[negative\\].*?)(?=.*?DoubleLiteralExpr\\[[0-9.d]+?\\].*?)(?=.*?IntegerLiteralExpr\\[[0-9]+?\\].*?)(?=.*?plus.*?)(?=.*?minus.*?)(?=.*?divide.*?)(?=.*?times.*?)(?=.*?remainder.*?)(?=.*?EnclosedExpr.*?).*$"));
     }
 }
